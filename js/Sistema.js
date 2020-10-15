@@ -1,7 +1,9 @@
-
+var msn=' ';
 function evento(){
-    var comando=document.getElementById('comando').value;
-    document.getElementById('area').value=comando;
+    var comando=document.getElementById('comando');
+    msn=msn+comando.value+'\n';
+    comando.value='';
+    document.getElementById('area').value=msn;
 }
 
 class Sistema

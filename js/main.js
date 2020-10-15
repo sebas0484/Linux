@@ -41,4 +41,5 @@ comandoLogin(comando, Sistema){
 }
 
 let ingresoComando=new Sistema();
-ingresoComando.fcomandoIngresado()
+ingresoComando.fcomandoIngresado();
+
