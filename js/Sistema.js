@@ -1,12 +1,7 @@
 
 function evento(){
     var comando=document.getElementById('comando').value;
-    comando.onkeypress('keyup', function(event){
-        if(event.key === '13'){
-            alert(comando);
-            document.getElementById('area').value=comando;
-        }
-    })
+    document.getElementById('area').value=comando;
 }
 
 class Sistema
