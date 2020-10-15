@@ -1,0 +1,2 @@
+# Linux
+Parcial Trabajo Linux
