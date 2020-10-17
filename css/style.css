@@ -1,6 +1,15 @@
 textarea
 {
-    overflow-y:scroll;
     background-color: black;
     color: lawngreen;
+    border: 0;
+    width: 650px;
 }
+
+input{
+    background: black;
+    color: lawngreen;
+    width: 650px;
+
+}
+::placeholder { color: lawngreen; }

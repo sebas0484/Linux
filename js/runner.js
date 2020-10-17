@@ -10,70 +10,132 @@ var flagLogin=true;
 var maquinaActual;
 var usuarioActual;
 function run() {
-    var maquinas = [
-        'Entrenadores',
-        'Estudiantes',
-        'Docentes',
-        'Universidad'
-    ];
-    var usuarios = [
-        'UsuarioRoot',
-        'Andres', 'Andrea', 'Carlos', 'Cristian',
-        'Daniel', 'Doris', 'Luna', 'Sara',
-        'Nicol', 'Felipe', 'Joan', 'Viviana',
-        'santiago', 'Lina', 'Laura', 'Luisa',
-    ];
-
-    if(flag==true){
-        console.log('Entro al if');
+    if(flag===true){
         var msn='';
         var comando=document.getElementById('comando');
-        msn=msn+comando.value+'\n';
+        msn=msn+comando.value;
         comando.value='';
          maquinaActual= msn;
-        document.getElementById('area').value='Ingrese comando: ';
-        flag=false;
+        console.log(maquinaActual+'verificar');
+         if(verficarMaquina(maquinaActual)===true) {
+             document.getElementById('area').value = 'Ingrese comando: ';
+             flag = false;
+         }
+         else
+         {
+             alert("Maquina no valida");
+         }
     }else{
-        console.log('Entro al else');
-        console.log('Envia: '+maquinaActual);
+
         comandoIngresado(maquinaActual);
 
     }
 }
  function comandoIngresado(maquinaActual){
-     if(flagLogin==true){
-         console.log('Entro al metodo');
-         console.log('Recibe: '+maquinaActual);
+     if(flagLogin===true){
          var msn='';
          var comando=document.getElementById('comando');
          msn=msn+comando.value;
          comando.value='';
-         console.log('Toma: '+msn);
          var login='login';
          if(msn===login){
-             console.log('Entro al metodo y al if');
              flagLogin=false;
+             document.getElementById('area').value='Usuario: ';
          }else{
-             console.log('Entro al metodo y al else');
+             alert('debe iniciar con login')
          }
-
-         document.getElementById('area').value='Usuario: ';
      }else{
-         loginUsuario();
+
+        if(loginUsuario(maquinaActual)==true){
+                console.log('todo bien');
+            }
+        else{
+            alert('usuario no encontrado');
+        }
      }
  }
 
- function loginUsuario(){
-     var msn='';
-     var comando=document.getElementById('comando');
-     msn=msn+comando.value;
-     comando.value='';
-     var usr=msn;
-     usuarioActual=usr;
-     if(usr==='UsuarioRoot'){
-         msn='Bienvenido '+usr;
-         document.getElementById('area').value=msn;
-     }else{
-         document.getElementById('area').value='Usuario invalido';
+ function loginUsuario(maquinaActual){
+    var flag=false
+         var msn = '';
+
+         var comando = document.getElementById('comando');
+         msn = msn + comando.value + '/n';
+         var usr = comando.value;
+         comando.value = '';
+
+         if (verficarUsuario(maquinaActual, usr) === true) {
+             msn += 'Bienvenido ' + usr + '/n';
+             document.getElementById('area').value = msn;
+             usuarioActual = usr;
+             flag=true;
+         } /*else {
+             document.getElementById('area').value = 'Usuario invalido ingrese otro';
+
+         }*/
+         return flag;
      }
+
+ function verficarMaquina (maquina)
+ {
+     var flag=false;
+     console.log('recibe'+maquina);
+     var maquinas = [
+         'Entrenadores',
+         'Estudiantes',
+         'Docentes',
+         'Universidad'
+     ];
+     for (var i = 0; i < maquinas.length; i++) {
+         if(maquina===maquinas[i]){
+             flag=true;
+         }
+     }
+    return flag;
+
+
  }
+function verficarUsuario (maquina,usuario)
+{
+    var flag=false;
+    var usuarios = [
+        'Andres','Andrea','Carlos','Cristian',
+        'Daniel','Doris','Luna','Sara',
+        'Nicol','Felipe','Joan','Viviana',
+        'santiago','Lina','Laura','Luisa',
+        'root'
+    ];
+    if(maquina==='Entrenadores'){
+    for (var i = 0; i < 4; i++) {
+            if(usuario===usuarios[i]||usuario===usuarios[16]){
+                flag=true;
+            }
+        }
+    }
+    if(maquina==='Estudiantes'){
+        for (var i = 4; i < 8; i++) {
+            if (usuario === usuarios[i]||usuario===usuarios[16]) {
+                flag=true;
+            }
+        }
+    }
+    if(maquina==='Docentes'){
+        for (var i = 8; i < 12; i++) {
+            if(usuario===usuarios[i]||usuario===usuarios[16]){
+                flag=true;
+            }
+        }
+    }
+    if(maquina==='Universidad'){
+        for (var i = 12; i < 16; i++) {
+            if(usuario===usuarios[i]||usuario===usuarios[16]) {
+                flag = true;
+            }
+        }
+    }
+
+
+    return flag;
+
+
+}
