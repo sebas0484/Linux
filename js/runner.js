@@ -7,74 +7,127 @@ var ip=[
 ]
 var flag=true;
 var flagLogin=true;
+var flagLogueado=false;
 var maquinaActual;
 var usuarioActual;
+var msn='';
+var comando;
+msn=msn+'Eliga la maquina:\n' +
+    'Entrenadores\n' +
+    'Estudiantes\n' +
+    'Docentes\n' +
+    'Universidad\n';
+document.getElementById('area').value = msn;
 function run() {
+    comando=document.getElementById('comando');
     if(flag===true){
-        var msn='';
-        var comando=document.getElementById('comando');
         msn=msn+comando.value;
+        maquinaActual= comando.value;
         comando.value='';
-         maquinaActual= msn;
         console.log(maquinaActual+'verificar');
          if(verficarMaquina(maquinaActual)===true) {
-             document.getElementById('area').value = 'Ingrese comando: ';
+             msn+='\nIngrese comando: ';
+             document.getElementById('area').value = msn;
              flag = false;
          }
          else
          {
-             alert("Maquina no valida");
+             msn+='\nMaquina no valida\n';
+             document.getElementById('area').value = msn;
          }
     }else{
-
         comandoIngresado(maquinaActual);
-
     }
 }
  function comandoIngresado(maquinaActual){
+    comando=document.getElementById('comando');
      if(flagLogin===true){
-         var msn='';
-         var comando=document.getElementById('comando');
-         msn=msn+comando.value;
+         msn+='\n'+comando.value;
+         var comandoIngresado=comando.value;
          comando.value='';
          var login='login';
-         if(msn===login){
+         if(comandoIngresado===login){
              flagLogin=false;
-             document.getElementById('area').value='Usuario: ';
-         }else{
-             alert('debe iniciar con login')
+             msn+='\nUsuario: ';
+             document.getElementById('area').value = msn;
+         } else{
+             msn+='\nDebe iniciar con login';
+             document.getElementById('area').value = msn;
          }
      }else{
+         if(flagLogueado===false){
+             loginUsuario(maquinaActual);
+         }
+     console.log('Entro al if');
+     msn += '\nIngrese comando: ';
+     document.getElementById('area').value = msn;
+     var comando2=document.getElementById('comando');
+     console.log(comando2.value);
+     validarComando(comando2.value);
+     }
+ }
 
-        if(loginUsuario(maquinaActual)==true){
-                console.log('todo bien');
-            }
-        else{
-            alert('usuario no encontrado');
-        }
+ function validarComando(comando){
+    console.log('Entro a validarComando');
+    console.log(comando);
+     if(comando==='logout') {
+         flagLogin=true;
+         msn += '\nSesion cerrada';
+         document.getElementById('area').value = msn;
+     }
+     if (comando.value === 'touch') {
+
+     }
+     if (comando.value === 'sudo chown ') {
+
+     }
+     if (comando.value === 'chmod') {
+
+     }
+     if (comando.value === 'ls -l') {
+
+     }
+     if (comando.value === 'ls') {
+
+     }
+     if (comando.value === 'cat') {
+
+     }
+     if (comando.value === 'nano') {
+
+     }
+     if (comando.value === './') {
+
+     }
+     if (comando.value === 'rm') {
+
+     }
+     if (comando.value === 'ssh') {
+
+     }
+     if (comando.value === 'scp') {
+
      }
  }
 
  function loginUsuario(maquinaActual){
-    var flag=false
-         var msn = '';
-
-         var comando = document.getElementById('comando');
-         msn = msn + comando.value + '/n';
-         var usr = comando.value;
-         comando.value = '';
-
-         if (verficarUsuario(maquinaActual, usr) === true) {
-             msn += 'Bienvenido ' + usr + '/n';
-             document.getElementById('area').value = msn;
-             usuarioActual = usr;
-             flag=true;
-         } /*else {
-             document.getElementById('area').value = 'Usuario invalido ingrese otro';
-
-         }*/
-         return flag;
+    comando=document.getElementById('comando');
+     msn = msn + comando.value + '\n';
+     var usr = comando.value;
+     comando.value = '';
+     if (verficarUsuario(maquinaActual, usr) === true) {
+         msn += 'Bienvenido ' + usr;
+         document.getElementById('area').value = msn;
+         usuarioActual = usr;
+         flagLogueado=true;
      }
+     else{
+         msn+='Usuario no encontrado\n' +
+             'Usuario: ';
+         document.getElementById('area').value = msn;
+
+     }
+ }
 
  function verficarMaquina (maquina)
  {
@@ -92,8 +145,6 @@ function run() {
          }
      }
     return flag;
-
-
  }
 function verficarUsuario (maquina,usuario)
 {
@@ -133,9 +184,5 @@ function verficarUsuario (maquina,usuario)
             }
         }
     }
-
-
     return flag;
-
-
 }
