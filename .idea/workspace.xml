@@ -22,7 +22,12 @@
     <list default="true" id="a91050ac-de26-45bd-ad29-604459f3d70b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/runner.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Archivo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Maquina.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Sistema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logica.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runner.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602777911537</updated>
       <workItem from="1602777912878" duration="21267000" />
+      <workItem from="1603046952724" duration="20566000" />
     </task>
     <servers />
   </component>
@@ -95,5 +101,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1602880867206" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1603066455869">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603066455869" />
   </component>
 </project>
