@@ -4,6 +4,7 @@ textarea
     color: lawngreen;
     border: 0;
     width: 650px;
+    overflow-y: scroll;
 }
 
 input{
