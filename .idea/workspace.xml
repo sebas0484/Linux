@@ -19,7 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="a91050ac-de26-45bd-ad29-604459f3d70b" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="a91050ac-de26-45bd-ad29-604459f3d70b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/js/runner.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runner.js" afterDir="false" />
+>>>>>>> 1833e36f800539ee933d7312aca3a2f1fb140494
+=======
+      <change beforePath="$PROJECT_DIR$/js/Archivo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Maquina.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Sistema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logica.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runner.js" beforeDir="false" />
+>>>>>>> 9de819c4dc1ae8978909317cdefc9af7f5f8ed88
+    </list>
+>>>>>>> 70745d9ef81b01f4cfdd21818b137ba3f31a7e72
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +72,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,7 +89,15 @@
       <option name="presentableId" value="Default" />
       <updated>1602777911537</updated>
       <workItem from="1602777912878" duration="21267000" />
+<<<<<<< HEAD
       <workItem from="1603046952724" duration="21049000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1602917828700" duration="2011000" />
+=======
+      <workItem from="1603046952724" duration="20566000" />
+>>>>>>> 9de819c4dc1ae8978909317cdefc9af7f5f8ed88
+>>>>>>> 70745d9ef81b01f4cfdd21818b137ba3f31a7e72
     </task>
     <servers />
   </component>
