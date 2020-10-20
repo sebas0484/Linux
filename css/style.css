@@ -1,0 +1,22 @@
+textarea
+{
+    background-color: black;
+    color: lawngreen;
+    border: 0;
+    width: 650px;
+    overflow-y: scroll;
+}
+h1{
+    color: lawngreen;
+}
+body{
+    background: #1b191b
+
+}
+input{
+    background: black;
+    color: lawngreen;
+    width: 650px;
+
+}
+::placeholder { color: lawngreen; }
