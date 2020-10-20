@@ -9,7 +9,7 @@ archivo8=['-rw-rw-rw-','Viviana','Joan','Viviana','dic 15 15:15','horarioAsesori
 archivo9=['-rw-rw-r--','Nicol','Nicol','Felipe','oct 31 12:00','peticion.txt'],
 archivo10=['-rw-r--r--','Laura','Laura','Luisa','may 05 1:00','cartas.rar'],
 archivo11=['-rw-rw-rw-','root','root','root','abr 14 16:05','trabajosdeGrado.rar'],
-archivo12=['-rw-rw-rw-','Lina','santiago','Lina','may 15 17:10','ListaSalones.txt']
+archivo12=['-rw-rw-rw-','Lina','santiago','Lina','may 15 17:10','listaSalones.txt']
 ]
 
 function verficarUsuario (maquina,usuario)
