@@ -69,6 +69,7 @@ function validarComando(){
         }
         if (comando.value === 'chmod') {
             msn += '\nIngrese permisos y nombre del archivo ';
+            document.getElementById('area').value = msn;
             var permisosIngresados=comabdo.value.split(' ')[0];
             var nombreArchivo=comabdo.value.split(' ')[1];
             if(verificarArchivoCreado(maquinaActual,nombreArchivo)==true){
@@ -153,16 +154,35 @@ function validarComando(){
             }
         }
         if (comando.value === 'cat') {
-
+            msn += '\nIngrese nombre del archivo';
+            document.getElementById('area').value = msn;
+            var nombreArchivo=comando.value;
+            msn += '\nIngrese contenido del archivo';
+            document.getElementById('area').value = msn;
+           var contenido=comando.value;
+            if(verificarArchivoCreado(maquinaActual,nombreArchivo)==false){
+                var nuevoArchivo=[['',usuarioActual,'','',fechaActual,nombreArchivo]]
+                archivos.push(nuevoArchivo);
+                msn += '\nSe ha creado el nuevo archivo con el nombre '+comando.value;
+                document.getElementById('area').value = msn;
+            }
         }
         if (comando.value === 'nano') {
 
         }
-        if (comando.value === './') {
-
-        }
         if (comando.value === 'rm') {
-
+            msn += '\nIngrese nombre del archivo';
+            document.getElementById('area').value = msn;
+            var nombreArchivo=comando.value;
+            for (var i=0;i<archivos.length; i++)
+            {
+                if(archivos[i][5]===nombreArchivo)
+                {
+                    archivos.splice(i,1);
+                    msn += '\nSe ha Eliminado el archivo con el nombre '+comando.value;
+                    document.getElementById('area').value = msn;
+                }
+            }
         }
         if (comando.value === 'ssh') {
 
