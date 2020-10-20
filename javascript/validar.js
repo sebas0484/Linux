@@ -10,14 +10,13 @@ function validarComando(){
     comando=document.getElementById('comando');
     if(flagValidarComando===false){
         console.log('Entro al if de validar comando');
-        msn+='\nIngrese comando prueba: ';
+        msn+='\nIngrese comando: ';
         document.getElementById('area').value = msn;
         flagValidarComando=true;
     }else{
         validarComandoIngresado=comando.value;
         comando.value='';
         console.log(validarComandoIngresado);
-
         if(validarComandoIngresado==='logout') {
             flagLogin=true;
             msn += '\nSesion cerrada';
